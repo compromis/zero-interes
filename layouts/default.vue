@@ -10,11 +10,12 @@ import BNavItem from '@compromis/blobby/components/nav/BNavItem.vue'
         <nuxt-link to="/">0% d'interés</nuxt-link>
       </template>
       <template #basic-nav>
-        <ul aria-title="Menú principal" class="nav-menu nav-menu-abridged">
-          <li class="nav-menu-item">
-            <nuxt-link to="/cas">En castellano</nuxt-link>
-          </li>
-        </ul>
+        <li class="nav-menu-item d-md-none">
+          <nuxt-link to="/cas">CAS</nuxt-link>
+        </li>
+        <li class="nav-menu-item d-none d-md-flex">
+          <nuxt-link to="/cas">En castellano</nuxt-link>
+        </li>
       </template>
     </b-nav>
     <nuxt-page />

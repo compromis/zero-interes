@@ -1203,6 +1203,11 @@ cookie-es@^0.5.0:
   resolved "https://registry.yarnpkg.com/cookie-es/-/cookie-es-0.5.0.tgz#a6ad89923e68c542fc9e760b07aefa5ab020d719"
   integrity sha512-RyZrFi6PNpBFbIaQjXDlFIhFVqV42QeKSZX1yQIl6ihImq6vcHNGMtqQ/QzY3RMPuYSkvsRwtnt5M9NeYxKt0g==
 
+core-js@^3.18.0:
+  version "3.22.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.22.2.tgz#3ea0a245b0895fa39d1faa15fe75d91ade504a01"
+  integrity sha512-Z5I2vzDnEIqO2YhELVMFcL1An2CIsFe9Q7byZhs8c/QxummxZlAHw33TUHbIte987LkisOgL0LwQ1P9D6VISnA==
+
 core-util-is@~1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.3.tgz#a6042d3634c2b27e9328f837b965fac83808db85"
@@ -4370,6 +4375,14 @@ vue-bundle-renderer@^0.3.6:
   dependencies:
     bundle-runner "^0.0.1"
 
+vue-marquee-text-component@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/vue-marquee-text-component/-/vue-marquee-text-component-2.0.1.tgz#62691df195f755471fa9bdc9b1969f836a922b9a"
+  integrity sha512-dbeRwDY5neOJcWZrDFU2tJMhPSsxN25ZpNYeZdt0jkseg1MbyGKzrfEH9nrCFZRkEfqhxG+ukyzwVwR9US5sTQ==
+  dependencies:
+    core-js "^3.18.0"
+    vue "^3.2.19"
+
 vue-router@^4.0.14:
   version "4.0.14"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.14.tgz#ce2028c1c5c33e30c7287950c973f397fce1bd65"
@@ -4377,7 +4390,7 @@ vue-router@^4.0.14:
   dependencies:
     "@vue/devtools-api" "^6.0.0"
 
-vue@^3.0.0, vue@^3.2.33:
+vue@^3.0.0, vue@^3.2.19, vue@^3.2.33:
   version "3.2.33"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.33.tgz#7867eb16a3293a28c4d190a837bc447878bd64c2"
   integrity sha512-si1ExAlDUrLSIg/V7D/GgA4twJwfsfgG+t9w10z38HhL/HA07132pUQ2KuwAo8qbCyMJ9e6OqrmWrOCr+jW7ZQ==

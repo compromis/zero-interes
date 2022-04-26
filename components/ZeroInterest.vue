@@ -2,36 +2,38 @@
   <svg version="1.1" x="0px" y="0px" viewBox="0 0 1400 933" preserveAspectRatio="xMidYMid slice">
     <image style="overflow:visible;" width="1400" height="933" xlink:href="../assets/images/base.jpg"></image>
     <g class="big-zero">
-    <rect x="658.41" y="235.25" class="st0" width="360.21" height="408.01"/>
-    <text transform="matrix(1 0 0 1 658.4061 559.3109)" class="st1 st2 st3 st4">{{ number }}</text>
-    <g>
-      <rect x="897.73" y="458.88" transform="matrix(0.9959 -0.0904 0.0904 0.9959 -41.8513 89.1443)" class="st0" width="130.36" height="95.18"/>
-      <text transform="matrix(0.9959 -0.0904 0.0904 0.9959 902.1575 558.1541)" class="st1 st2 st5 st6">%</text>
+      <rect x="658.41" y="235.25" class="st0" width="360.21" height="408.01"/>
+      <text transform="matrix(1 0 0 1 658.4061 559.3109)" class="st1 st2 st3 st4">{{ number }}</text>
+      <g>
+        <rect x="897.73" y="458.88" transform="matrix(0.9959 -0.0904 0.0904 0.9959 -41.8513 89.1443)" class="st0" width="130.36" height="95.18"/>
+        <text transform="matrix(0.9959 -0.0904 0.0904 0.9959 902.1575 558.1541)" class="st1 st2 st5 st6">%</text>
+      </g>
     </g>
-  </g>
-  <image style="overflow:visible;" width="1400" height="933" xlink:href="../assets/images/transparent.png"></image>
-  <g>
-    <rect x="595.44" y="544.12" class="st7" width="418.33" height="215.78"/>
+    <image style="overflow:visible;" width="1400" height="933" xlink:href="../assets/images/transparent.png"></image>
     <g>
-      <rect x="579.39" y="558.82" class="st0" width="444.33" height="83.44"/>
-      <text transform="matrix(1 0 0 1 616.6531 628.0162)" class="st1 st8 st9 st10">d’interés</text>
+      <rect x="595.44" y="544.12" class="st7" width="418.33" height="215.78"/>
+      <g>
+        <rect x="579.39" y="558.82" class="st0" width="444.33" height="83.44"/>
+        <text transform="matrix(1 0 0 1 616.6531 628.0162)" class="st1 st8 st9 st10">d’interés</text>
+      </g>
+      <rect x="620.83" y="646.71" class="st0" width="490.32" height="131.92"/>
+      <text transform="matrix(1 0 0 1 620.8328 662.5001)">
+        <Transition>
+          <tspan x="0" y="0" class="st1 st11 st12" v-if="sentence > 0">a tornar els diners dels rescat</tspan>
+        </Transition>
+        <Transition>
+          <tspan x="0" y="27.08" class="st1 st11 st12" v-if="sentence > 1">a atendre’t presencialment</tspan>
+        </Transition>
+        <Transition>
+          <tspan x="0" y="54.15" class="st1 st11 st12" v-if="sentence > 2">a mantindre les oficines obertes</tspan>
+        </Transition>
+        <Transition>
+          <tspan x="0" y="81.23" class="st1 st11 st12" v-if="sentence > 3">a mantindre llocs de treball</tspan>
+        </Transition>
+      </text>
     </g>
-    <rect x="620.83" y="646.71" class="st0" width="490.32" height="131.92"/>
-    <text transform="matrix(1 0 0 1 620.8328 662.5001)">
-      <Transition>
-         <tspan x="0" y="0" class="st1 st11 st12" v-if="sentence > 0">a tornar els diners dels rescat</tspan>
-      </Transition>
-      <Transition>
-        <tspan x="0" y="27.08" class="st1 st11 st12" v-if="sentence > 1">a atendre’t presencialment</tspan>
-      </Transition>
-      <Transition>
-        <tspan x="0" y="54.15" class="st1 st11 st12" v-if="sentence > 2">a mantindre les oficines obertes</tspan>
-      </Transition>
-      <Transition>
-        <tspan x="0" y="81.23" class="st1 st11 st12" v-if="sentence > 3">a mantindre llocs de treball</tspan>
-      </Transition>
-    </text>
-  </g>
+    <rect x="595.39" y="769.82" width="134.33" height="46.44" class="cta" @click="shame"></rect>
+    <text transform="matrix(1 0 0 1 619.8328 798.5001)" class="cta-text">M'interesa</text>
   </svg>
 </template>
 
@@ -69,16 +71,16 @@ const sentences = () => {
 <style lang="scss" scoped>
 .st0{fill:none;}
 .st1{fill:#00A7DD;}
-.st2{font-family:'Gilroy-ExtraBoldItalic';}
+.st2{font-family:'Gilroy', sans-serif; font-weight: bold; font-style: italic;}
 .st3{font-size:462.9492px;}
 .st4{letter-spacing:-23;}
 .st5{font-size:133.6767px;}
 .st6{letter-spacing:-6;}
 .st7{fill:#FFFFFF;}
-.st8{font-family:'Gilroy-BlackItalic';}
+.st8{font-family:'Gilroy', sans-serif; font-weight: 900; font-style: italic;}
 .st9{font-size:98.8521px;}
 .st10{letter-spacing:-0.04em;}
-.st11{font-family:'Gilroy-SemiBold';}
+.st11{font-family:'Gilroy', sans-serif;}
 .st12{font-size:22.5641px;}
 
 .v-enter-active,
@@ -96,6 +98,20 @@ const sentences = () => {
   animation: big-zero 2s ease infinite;
   animation-delay: 1.25s;
   transform-origin: center;
+}
+
+.cta {
+  fill: #f5c53e;
+  cursor: pointer;
+
+  &:hover {
+    fill: darken(#f5c53e, 10%);
+  }
+}
+
+.cta-text {
+  font-size: 18px;
+  pointer-events: none;
 }
 
 @keyframes big-zero {

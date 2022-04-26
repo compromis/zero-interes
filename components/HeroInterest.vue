@@ -17,6 +17,7 @@
   display: flex;
   max-width: 2000px;
   margin: 0 auto;
+  font-family: 'Gilroy', sans-serif;
 
   .text {
     width: 100%;

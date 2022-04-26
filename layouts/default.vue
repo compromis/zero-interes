@@ -21,3 +21,35 @@ import BNavItem from '@compromis/blobby/components/nav/BNavItem.vue'
     <nuxt-page />
   </div>
 </template>
+
+<style lang="scss">
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/fonts/Gilroy-BlackItalic.woff2') format('woff2'),
+        url('../assets/fonts/Gilroy-BlackItalic.woff') format('woff'),
+        url('../assets/fonts/Gilroy-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/fonts/Gilroy-ExtraBoldItalic.woff2') format('woff2'),
+        url('../assets/fonts/Gilroy-ExtraBoldItalic.woff') format('woff'),
+        url('../assets/fonts/Gilroy-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/fonts/Gilroy-SemiBold.woff2') format('woff2'),
+        url('../assets/fonts/Gilroy-SemiBold.woff') format('woff'),
+        url('../assets/fonts/Gilroy-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+</style>

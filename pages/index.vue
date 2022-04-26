@@ -7,6 +7,7 @@ import HeroBailout from '@/components/HeroBailout.vue'
   <main>
     <hero-interest />
     <hero-bailout />
+    <hero-grandma />
   </main>
 </template>
 

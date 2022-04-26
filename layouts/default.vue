@@ -52,4 +52,14 @@ import BNavItem from '@compromis/blobby/components/nav/BNavItem.vue'
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Fixture';
+    src: url('../assets/fonts/Fixture-ExpandedBlack.woff2') format('woff2'),
+        url('../assets/fonts/Fixture-ExpandedBlack.woff') format('woff'),
+        url('../assets/fonts/Fixture-ExpandedBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
 </style>

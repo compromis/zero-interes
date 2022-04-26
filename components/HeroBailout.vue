@@ -7,7 +7,9 @@
         </div>
       </MarqueeText>
     </ClientOnly>
-    <div class="hero-bailout-subtitle">Diners que hem pagat per a rescatar als bancs i que tenen 0% interés en tornar.</div>
+    <div class="hero-bailout-subtitle">
+      <div class="container">Diners que hem pagat per a rescatar als bancs i que tenen 0% interés en tornar.</div>
+    </div>
   </div>
 </template>
 
@@ -24,9 +26,7 @@
   &-subtitle {
     font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 1.2;
-    max-width: calc(1296px + 1rem);
-    margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
   }
 }
 .scroll {

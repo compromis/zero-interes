@@ -5,9 +5,10 @@ import HeroBailout from '@/components/HeroBailout.vue'
 
 <template>
   <main>
-    <hero-interest />
-    <hero-bailout />
-    <hero-grandma />
+    <HeroInterest>
+      <ZeroInterest />
+    </HeroInterest>
+    <HeroBailout />
   </main>
 </template>
 

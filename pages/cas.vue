@@ -5,8 +5,13 @@ import HeroBailout from '@/components/HeroBailout.vue'
 
 <template>
   <main>
-    <hero-interest />
-    <hero-bailout />
+    <HeroInterest>
+      <ZeroInterest
+        cta="Me interesa"
+        interest="de interés"
+        :sentences="['a', 'b', 'c', 'd']" />
+    </HeroInterest>
+    <HeroBailout />
   </main>
 </template>
 

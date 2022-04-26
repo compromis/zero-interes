@@ -1,5 +1,5 @@
 <template>
-  <div class="hero-bailout">
+  <div id="bailout" class="hero-bailout">
     <ClientOnly>
       <MarqueeText class="hero-bailout-marquee" :duration="40" :repeat="2">
         <div class="scroll">

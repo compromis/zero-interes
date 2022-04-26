@@ -1,5 +1,5 @@
 <template>
-  <svg version="1.1" x="0px" y="0px" viewBox="0 0 1400 933" preserveAspectRatio="xMidYMid slice">
+  <svg version="1.1" x="0px" y="0px" viewBox="0 0 1400 933" preserveAspectRatio="xMidYMid slice" class="text">
     <image style="overflow:visible;" width="1400" height="933" xlink:href="../assets/images/base.jpg"></image>
     <g class="big-zero">
       <rect x="658.41" y="235.25" class="st0" width="360.21" height="408.01"/>
@@ -14,38 +14,61 @@
       <rect x="595.44" y="544.12" class="st7" width="418.33" height="215.78"/>
       <g>
         <rect x="579.39" y="558.82" class="st0" width="444.33" height="83.44"/>
-        <text transform="matrix(1 0 0 1 616.6531 628.0162)" class="st1 st8 st9 st10">d’interés</text>
+        <text transform="matrix(1 0 0 1 616.6531 628.0162)" class="st1 st8 st9 st10">{{ interest }}</text>
       </g>
       <rect x="620.83" y="646.71" class="st0" width="490.32" height="131.92"/>
       <text transform="matrix(1 0 0 1 620.8328 662.5001)">
         <Transition>
-          <tspan x="0" y="0" class="st1 st11 st12" v-if="sentence > 0">a tornar els diners dels rescat</tspan>
+          <tspan x="0" y="0" class="st1 st11 st12" v-if="sentence > 0">{{ sentences[0] }}</tspan>
         </Transition>
         <Transition>
-          <tspan x="0" y="27.08" class="st1 st11 st12" v-if="sentence > 1">a atendre’t presencialment</tspan>
+          <tspan x="0" y="27.08" class="st1 st11 st12" v-if="sentence > 1">{{ sentences[1] }}</tspan>
         </Transition>
         <Transition>
-          <tspan x="0" y="54.15" class="st1 st11 st12" v-if="sentence > 2">a mantindre les oficines obertes</tspan>
+          <tspan x="0" y="54.15" class="st1 st11 st12" v-if="sentence > 2">{{ sentences[2] }}</tspan>
         </Transition>
         <Transition>
-          <tspan x="0" y="81.23" class="st1 st11 st12" v-if="sentence > 3">a mantindre llocs de treball</tspan>
+          <tspan x="0" y="81.23" class="st1 st11 st12" v-if="sentence > 3">{{ sentences[3] }}</tspan>
         </Transition>
       </text>
     </g>
-    <rect x="595.39" y="769.82" width="134.33" height="46.44" class="cta" @click="shame"></rect>
-    <text transform="matrix(1 0 0 1 619.8328 798.5001)" class="cta-text">M'interesa</text>
+    
+    <a xlink:href="#bailout" class="button">
+      <rect x="595.39" y="769.82" width="134.33" height="46.44" class="cta"></rect>
+      <text transform="matrix(1 0 0 1 619.8328 798.5001)" class="cta-text">{{ cta }}</text>
+    </a>
   </svg>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
 
+defineProps({
+  interest: {
+    type: String,
+    default: 'd’interés'
+  },
+  cta: {
+    type: String,
+    default: 'M’interesa'
+  },
+  sentences: {
+    type: Array,
+    default: () => [
+      'a tornar els diners dels rescat',
+      'a atendre’t presencialment',
+      'a mantindre les oficines obertes',
+      'a mantindre llocs de treball'
+    ]
+  },
+})
+
 const number = ref(9)
 const sentence = ref(0)
 
 onMounted(() => {
   countdown()
-  sentences()
+  showSentences()
 })
 
 const countdown = () => {
@@ -57,7 +80,7 @@ const countdown = () => {
   }, 100)
 }
 
-const sentences = () => {
+const showSentences = () => {
   const interval = setInterval(() => {
     sentence.value++
     if (sentence.value === 4) {
@@ -112,6 +135,14 @@ const sentences = () => {
 .cta-text {
   font-size: 18px;
   pointer-events: none;
+}
+
+.button:focus {
+  box-shadow: 0 0 10px 10px red;
+
+  .cta {
+    fil: red;
+  }
 }
 
 @keyframes big-zero {

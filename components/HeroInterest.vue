@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
     <div class="image">
-      <ZeroInterest class="text" />
+      <slot />
     </div>
   </div>
 </template>
@@ -19,7 +19,7 @@
   margin: 0 auto;
   font-family: 'Gilroy', sans-serif;
 
-  .text {
+  :deep(.text) {
     width: 100%;
     height: 100%;
   }

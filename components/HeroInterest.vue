@@ -17,7 +17,7 @@
   display: flex;
   max-width: 2000px;
   margin: 0 auto;
-  font-family: 'Gilroy', sans-serif;
+  font-family: var(--font-bank);
 
   :deep(.text) {
     width: 100%;

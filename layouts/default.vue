@@ -1,6 +1,7 @@
 <script setup>
 import BNav from '@compromis/blobby/components/nav/BNav.vue'
 import BNavItem from '@compromis/blobby/components/nav/BNavItem.vue'
+import BFooter from '@compromis/blobby/components/footer/BFooter.vue'
 
 const route = useRoute()
 </script>
@@ -23,6 +24,11 @@ const route = useRoute()
       </template>
     </b-nav>
     <nuxt-page />
+    <div class="footer-wrapper">
+      <div class="container">
+        <b-footer variant="white" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -68,6 +74,17 @@ const route = useRoute()
 }
 
 :root {
+  --white: #fff;
+  --blue: #00A7DD;
+  --yellow: #f5c53e;
   --orange: #ff6b2a;
+  --black: #222;
+  --font-bank: 'Gilroy', sans-serif;
+  --font-compromis: 'Fixture', sans-serif;
+}
+
+.footer-wrapper {
+  background: var(--orange);
+  color: white;
 }
 </style>

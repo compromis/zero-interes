@@ -97,17 +97,17 @@ const showSentences = () => {
 
 <style lang="scss" scoped>
 .st0{fill:none;}
-.st1{fill:#00A7DD;}
-.st2{font-family:'Gilroy', sans-serif; font-weight: bold; font-style: italic;}
+.st1{fill:var(--blue);}
+.st2{font-family:var(--font-bank); font-weight: bold; font-style: italic;}
 .st3{font-size:462.9492px;}
 .st4{letter-spacing:-23;}
 .st5{font-size:133.6767px;}
 .st6{letter-spacing:-6;}
-.st7{fill:#FFFFFF;}
-.st8{font-family:'Gilroy', sans-serif; font-weight: 900; font-style: italic;}
+.st7{fill:var(--white);}
+.st8{font-family:var(--font-bank); font-weight: 900; font-style: italic;}
 .st9{font-size:98.8521px;}
 .st10{letter-spacing:-0.04em;}
-.st11{font-family:'Gilroy', sans-serif;}
+.st11{font-family:var(--font-bank);}
 .st12{font-size:22.5641px;}
 
 .v-enter-active,
@@ -128,7 +128,7 @@ const showSentences = () => {
 }
 
 .cta {
-  fill: #f5c53e;
+  fill: var(--yellow);
   cursor: pointer;
 
   &:hover {
@@ -139,14 +139,7 @@ const showSentences = () => {
 .cta-text {
   font-size: 18px;
   pointer-events: none;
-}
-
-.button:focus {
-  box-shadow: 0 0 10px 10px red;
-
-  .cta {
-    fil: red;
-  }
+  fill: var(--black);
 }
 
 @keyframes big-zero {

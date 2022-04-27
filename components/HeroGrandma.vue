@@ -13,11 +13,11 @@
 
 <style lang="scss" scoped>
 .hero-grandma {
-  background: white;
+  background: var(--white);
   height: calc(100vh - 100px);
   position: relative;
   overflow: hidden;
-  font-family: 'Fixture', sans-serif;
+  font-family: var(--font-compromis);
 
   &-text {
     height: calc(100vh - 100px);

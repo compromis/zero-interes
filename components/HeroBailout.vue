@@ -15,9 +15,9 @@
 
 <style lang="scss" scoped>
 .hero-bailout {
-  background: #00A7DD;
-  font-family: 'Gilroy', sans-serif;
-  color: white;
+  background: var(--blue);
+  font-family: var(--font-bank);
+  color: var(--white);
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr auto;

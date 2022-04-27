@@ -1,21 +1,15 @@
 <template>
-  <div class="hero-grandma">
+  <section class="hero-grandma">
     <div class="hero-grandma-text">
-      <div style="color: #EC6830">Volem una  <br> banca pública</div>
-      <div>que fique les <br> persones al centre</div>
+      <div class="text-orange"><slot name="top" /></div>
+      <div><slot name="bottom" /></div>
     </div>
     <img src="../assets/images/granny.jpg" alt="">
-  </div>
-  <div style="height: 100vh; background: orange;">
+  </section>
+  <section class="proposal">
     asdfasd
-  </div>
+  </section>
 </template>
-
-<script>
-  export default {
-    
-  }
-</script>
 
 <style lang="scss" scoped>
 .hero-grandma {
@@ -30,7 +24,7 @@
     display: grid;
     grid-template-rows: 1fr auto;
     text-align: center;
-    font-size: clamp(2.5rem, 7.5vw, 8rem);
+    font-size: clamp(2rem, 7vw, 7rem);
     letter-spacing: -0.05em;
     line-height: 1;
     padding-top: 1.5rem;
@@ -51,5 +45,14 @@
     padding-top: 12vh;
     width: 100%;
   }
+
+  .text-orange {
+    color: var(--orange);
+  }
+}
+
+.proposal {
+  background: var(--orange);
+  height: 100vh;
 }
 </style>

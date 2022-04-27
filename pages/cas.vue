@@ -9,9 +9,25 @@ import HeroBailout from '@/components/HeroBailout.vue'
       <ZeroInterest
         cta="Me interesa"
         interest="de interés"
-        :sentences="['a', 'b', 'c', 'd']" />
+        :sentences="[
+          'en devolver el dinero del rescate',
+          'en atenderte presencialmente',
+          'en mantener las oficinas abiertas',
+          'en mantener los puestos de trabajo'
+        ]"
+        wider />
     </HeroInterest>
-    <HeroBailout />
+    <HeroBailout>
+      Diners que hem pagat per a rescatar als bancs i que tenen 0% interés en tornar.
+    </HeroBailout>
+    <HeroGrandma>
+      <template #top>
+        Volem una <br> banca pública
+      </template>
+      <template #bottom>
+        que fique les <br> persones al centre
+      </template>
+    </HeroGrandma>
   </main>
 </template>
 

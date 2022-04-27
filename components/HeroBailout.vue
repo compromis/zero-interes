@@ -1,5 +1,5 @@
 <template>
-  <div id="bailout" class="hero-bailout">
+  <section id="bailout" class="hero-bailout">
     <ClientOnly>
       <MarqueeText class="hero-bailout-marquee" :duration="40" :repeat="2">
         <div class="scroll">
@@ -8,9 +8,9 @@
       </MarqueeText>
     </ClientOnly>
     <div class="hero-bailout-subtitle">
-      <div class="container">Diners que hem pagat per a rescatar als bancs i que tenen 0% interés en tornar.</div>
+      <div class="container"><slot /></div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>

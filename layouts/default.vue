@@ -1,6 +1,8 @@
 <script setup>
 import BNav from '@compromis/blobby/components/nav/BNav.vue'
 import BNavItem from '@compromis/blobby/components/nav/BNavItem.vue'
+
+const route = useRoute()
 </script>
 
 <template>
@@ -11,10 +13,12 @@ import BNavItem from '@compromis/blobby/components/nav/BNavItem.vue'
       </template>
       <template #basic-nav>
         <li class="nav-menu-item d-md-none">
-          <nuxt-link to="/cas">CAS</nuxt-link>
+          <nuxt-link to="/" v-if="route.name === 'cas'">VAL</nuxt-link>
+          <nuxt-link to="/cas" v-else>CAS</nuxt-link>
         </li>
         <li class="nav-menu-item d-none d-md-flex">
-          <nuxt-link to="/cas">En castellano</nuxt-link>
+          <nuxt-link to="/" v-if="route.name === 'cas'">En valencià</nuxt-link>
+          <nuxt-link to="/cas" v-else>En castellano</nuxt-link>
         </li>
       </template>
     </b-nav>
@@ -61,5 +65,9 @@ import BNavItem from '@compromis/blobby/components/nav/BNavItem.vue'
     font-weight: 900;
     font-style: normal;
     font-display: swap;
+}
+
+:root {
+  --orange: #ff6b2a;
 }
 </style>

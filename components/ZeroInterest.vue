@@ -11,7 +11,7 @@
     </g>
     <image style="overflow:visible;" width="1400" height="933" xlink:href="../assets/images/transparent.png"></image>
     <g>
-      <rect x="595.44" y="544.12" class="st7" width="418.33" height="215.78"/>
+      <rect x="595.44" y="544.12" class="st7" :width="wider ? 460.33 : 418.33" height="215.78"/>
       <g>
         <rect x="579.39" y="558.82" class="st0" width="444.33" height="83.44"/>
         <text transform="matrix(1 0 0 1 616.6531 628.0162)" class="st1 st8 st9 st10">{{ interest }}</text>
@@ -34,7 +34,7 @@
     </g>
     
     <a xlink:href="#bailout" class="button">
-      <rect x="595.39" y="769.82" width="134.33" height="46.44" class="cta"></rect>
+      <rect x="595.39" y="769.82" :width="wider ? 142.33 : 134.33" height="46.44" class="cta"></rect>
       <text transform="matrix(1 0 0 1 619.8328 798.5001)" class="cta-text">{{ cta }}</text>
     </a>
   </svg>
@@ -61,6 +61,10 @@ defineProps({
       'a mantindre llocs de treball'
     ]
   },
+  wider: {
+    type: Boolean,
+    default: false
+  }
 })
 
 const number = ref(9)

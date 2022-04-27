@@ -1,9 +1,9 @@
 <template>
-  <div class="hero">
+  <section class="hero">
     <div class="image">
       <slot />
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>

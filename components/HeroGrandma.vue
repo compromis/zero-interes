@@ -1,58 +1,49 @@
 <template>
   <section class="hero-grandma">
-      <div class="hero-grandma-text-first text-orange">
-        <div class="line"><span>Volem</span></div>
-        <div class="line"><span>una</span><span>banca</span></div>
-        <div class="line"><span>pública</span></div>
-      </div>
-      <img src="../assets/images/granny.jpg" alt="">
-      <div class="hero-grandma-text-second">
-        <div class="line"><span>que</span><span>pense</span></div>
-        <div class="line"><span>en</span><span>les</span></div>
-        <div class="line"><span>persones</span></div>
-      </div>
-  </section>
-  <section class="proposal">
-    asdfasd
+    <div class="hero-grandma-text-first text-orange">
+      <slot name="top" />
+    </div>
+    <img src="../assets/images/granny.jpg" alt="">
+    <div class="hero-grandma-text-second">
+      <slot name="bottom" />
+    </div>
   </section>
 </template>
 
-<script>
-  import gsap from 'gsap' 
-  import scrollTrigger from 'gsap/ScrollTrigger'
+<script setup>
+import { onMounted } from 'vue'
+import gsap from 'gsap' 
+import scrollTrigger from 'gsap/ScrollTrigger'
 
-  export default {
-    mounted () {
-      gsap.registerPlugin(scrollTrigger)
-    
-      gsap.from('.hero-grandma-text-first span', 
-      {
-        scrollTrigger: {
-          trigger: '.hero-grandma-text-first',
-          start: 'top 70%'
-        },
-          y: 125,
-          duration: 1.5,
-          stagger: 0.15,
-          ease: 'Power4.easeOut'
-        }
-      );
+onMounted(() => {
+  gsap.registerPlugin(scrollTrigger)
+  gsap.from('.hero-grandma-text-first span', 
+    {
+      scrollTrigger: {
+        trigger: '.hero-grandma-text-first',
+        start: 'top 70%'
+      },
+      y: 125,
+      duration: 1.5,
+      stagger: 0.15,
+      ease: 'Power4.easeOut'
+    }
+  )
 
-      gsap.from('.hero-grandma-text-second span', 
-      {
-        scrollTrigger: {
-          trigger: '.hero-grandma-text-second',
-          start: 'top 90%'
-        },
-          y: 125,
-          duration: 1.5,
-          stagger: 0.15,
-          ease: 'Power4.easeOut',
-          delay: 1
-        }
-      );
-    },
-  }
+  gsap.from('.hero-grandma-text-second span',
+    {
+      scrollTrigger: {
+        trigger: '.hero-grandma-text-second',
+        start: 'top 90%'
+      },
+      y: 125,
+      duration: 1.5,
+      stagger: 0.15,
+      ease: 'Power4.easeOut',
+      delay: 1
+    }
+  )
+})
 </script>
 
 <style lang="scss" scoped>
@@ -62,6 +53,7 @@
   position: relative;
   overflow: hidden;
   font-family: var(--font-compromis);
+  font-weight: 900;
   display: grid;
   grid-template-columns: 1fr 25vw 1fr;
   align-items: center;
@@ -85,7 +77,7 @@
     overflow: hidden;
   }
 
-  span {
+  :deep(span) {
     display: inline-block;
     padding: 0 .1em;
   }
@@ -102,11 +94,6 @@
   .text-orange {
     color: var(--orange);
   }
-}
-
-.proposal {
-  background: var(--orange);
-  height: 100vh;
 }
 
 @media (max-width: 700px) {

@@ -13,27 +13,24 @@
   </section>
 </template>
 
-<script>
+<script setup>
+import { onMounted, ref } from 'vue'
 import gsap from 'gsap' 
 import scrollTrigger from 'gsap/ScrollTrigger'
 
-export default {
-  data() {
-    return {
-      isPaused: true,
-    }
-  },
+const isPaused = ref(true)
 
-  mounted () {
-    gsap.registerPlugin(scrollTrigger)
-    
-    scrollTrigger.create({
-      trigger: '.hero-bailout',
-      start: 'top center',
-      onToggle: self => this.isPaused = false
-    })
-  },
-}
+onMounted(() => {
+  gsap.registerPlugin(scrollTrigger)
+
+  scrollTrigger.create({
+    trigger: '.hero-bailout',
+    start: 'top center',
+    onToggle () {
+      isPaused.value = false
+    }
+  })
+})
 </script>
 
 <style lang="scss" scoped>

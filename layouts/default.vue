@@ -73,6 +73,15 @@ const route = useRoute()
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Fixture';
+    src: url('../assets/fonts/Fixture-ExpandedRegular.woff2') format('woff2'),
+        url('../assets/fonts/Fixture-ExpandedRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
   --white: #fff;
   --blue: #00A7DD;

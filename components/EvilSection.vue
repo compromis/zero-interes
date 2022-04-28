@@ -35,7 +35,7 @@
 
     h2 {
       position: sticky;
-      top: 4rem;
+      top: 6rem;
       font-size: clamp(2.5rem, 7.5vw, 4rem);
       line-height: 1;
     }

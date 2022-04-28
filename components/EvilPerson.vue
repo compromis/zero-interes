@@ -3,12 +3,18 @@
     <span class="name">{{ name }}</span>
     <span class="bank">{{ bank }}</span>
     <span class="spacer" />
-    <span class="salary">{{ salary }}<span class="per-annum">/any</span></span>
+    <span class="salary">
+      <AnimatedNumber :id="id" :to-number="salary" currency />
+    <span class="per-annum">/any</span></span>
   </li>
 </template>
 
 <script setup>
 defineProps({
+  id: {
+    type: String,
+    required: true
+  },
   name: {
     type: String,
     required: true

@@ -22,7 +22,6 @@ const isPaused = ref(true)
 
 onMounted(() => {
   gsap.registerPlugin(scrollTrigger)
-
   scrollTrigger.create({
     trigger: '.hero-bailout',
     start: 'top center',

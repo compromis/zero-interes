@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@compromis/blobby": "^1.1.4",
+    "gsap": "^3.10.4",
     "sass": "^1.50.1",
     "vue-marquee-text-component": "^2.0.1"
   }

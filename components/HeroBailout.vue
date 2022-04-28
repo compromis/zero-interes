@@ -1,7 +1,7 @@
 <template>
   <section id="bailout" class="hero-bailout">
     <ClientOnly>
-      <MarqueeText class="hero-bailout-marquee" :duration="40" :repeat="2">
+      <MarqueeText class="hero-bailout-marquee" :duration="40" :repeat="2" :paused="isPaused">
         <div class="scroll">
           100.000.000.000€
         </div>
@@ -12,6 +12,29 @@
     </div>
   </section>
 </template>
+
+<script>
+import gsap from 'gsap' 
+import scrollTrigger from 'gsap/ScrollTrigger'
+
+export default {
+  data() {
+    return {
+      isPaused: true,
+    }
+  },
+
+  mounted () {
+    gsap.registerPlugin(scrollTrigger)
+    
+    scrollTrigger.create({
+      trigger: '.hero-bailout',
+      start: 'top center',
+      onToggle: self => this.isPaused = false
+    })
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .hero-bailout {
@@ -31,7 +54,7 @@
 }
 .scroll {
   font-size: clamp(20rem, 35vw, 40rem);
-  margin-right: 15vw;
+  margin-left: 20vw;
   line-height: 1.2;
   align-self: center;
   transform: translateY(2vw);

@@ -1,16 +1,16 @@
 <template>
   <section class="hero-grandma">
-    <div class="hero-grandma-text">
-      <div class="hero-grandma-text-first" style="color: #EC6830">
-        <div class="line"><span>Volem</span><span>una</span></div>
-        <div class="line"><span>banca</span><span>pública</span></div>
+      <div class="hero-grandma-text-first text-orange">
+        <div class="line"><span>Volem</span></div>
+        <div class="line"><span>una</span><span>banca</span></div>
+        <div class="line"><span>pública</span></div>
       </div>
+      <img src="../assets/images/granny.jpg" alt="">
       <div class="hero-grandma-text-second">
-        <div class="line"><span>que</span><span>fique</span><span>les</span></div>
-        <div class="line"><span>persones</span><span>al</span><span>centre</span></div>
+        <div class="line"><span>que</span><span>pense</span></div>
+        <div class="line"><span>en</span><span>les</span></div>
+        <div class="line"><span>persones</span></div>
       </div>
-    </div>
-    <img src="../assets/images/granny.jpg" alt="">
   </section>
   <section class="proposal">
     asdfasd
@@ -47,7 +47,8 @@
           y: 125,
           duration: 1.5,
           stagger: 0.15,
-          ease: 'Power4.easeOut'
+          ease: 'Power4.easeOut',
+          delay: 1
         }
       );
     },
@@ -57,45 +58,45 @@
 <style lang="scss" scoped>
 .hero-grandma {
   background: var(--white);
-  height: calc(100vh - 100px);
+  max-height: 70vh;
   position: relative;
   overflow: hidden;
   font-family: var(--font-compromis);
+  display: grid;
+  grid-template-columns: 1fr 25vw 1fr;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(2.75rem, 4.5vw, 6rem);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  text-transform: uppercase;
 
-  &-text {
-    height: calc(100vh - 100px);
-    display: grid;
-    grid-template-rows: 1fr auto;
-    text-align: center;
-    font-size: clamp(2rem, 7vw, 7rem);
-    letter-spacing: -0.05em;
-    line-height: 1;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    text-transform: uppercase;
+  &-text-first {
+    text-align: left;
+    padding-left: 3vw;
+  }
 
-    :deep(.line) {
-      overflow: hidden;
-    }
+  &-text-second {
+    text-align: right;
+    padding-right: 3vw;
+  }
 
-    span {
-      display: inline-block;
-      padding: 0 .1em;
-    }
+  :deep(.line) {
+    overflow: hidden;
+  }
+
+  span {
+    display: inline-block;
+    padding: 0 .1em;
   }
 
   img {
     z-index: 0;
-    height: calc(100vh - 100px);
     object-fit: contain;
     object-position: bottom;
-    padding-top: 12vh;
+    padding-top: 2vh;
     width: 100%;
+    height: 100%;
   }
 
   .text-orange {
@@ -106,5 +107,33 @@
 .proposal {
   background: var(--orange);
   height: 100vh;
+}
+
+@media (max-width: 700px) {
+  .hero-grandma {
+    grid-template-columns: 1fr;
+
+    &-text {
+      &-first, &-second {
+        z-index: 10;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+
+      &-first {
+        top: 1rem;
+      }
+
+      &-second {
+        bottom: 1rem;
+      }
+    }
+
+    img {
+      padding-top: 15vh;
+    }
+  }
 }
 </style>

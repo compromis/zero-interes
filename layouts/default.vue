@@ -77,7 +77,7 @@ const route = useRoute()
   --white: #fff;
   --blue: #00A7DD;
   --yellow: #f5c53e;
-  --orange: #ff6b2a;
+  --orange: #ff5924;
   --black: #222;
   --font-bank: 'Gilroy', sans-serif;
   --font-compromis: 'Fixture', sans-serif;

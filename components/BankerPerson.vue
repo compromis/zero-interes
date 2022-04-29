@@ -1,11 +1,11 @@
 <template>
-  <li class="evil-person">
-    <span class="name">{{ name }}</span>
-    <span class="bank">{{ bank }}</span>
+  <li class="banker-person">
+    <span class="name">{{ name }} <span class="bank">{{ bank }}</span></span>
     <span class="spacer" />
     <span class="salary">
       <AnimatedNumber :id="id" :to-number="salary" currency />
-    <span class="per-annum">/any</span></span>
+      <span class="per-annum">/any</span>
+    </span>
   </li>
 </template>
 
@@ -24,14 +24,14 @@ defineProps({
     required: true
   },
   salary: {
-    type: String,
+    type: Number,
     required: true
   }
 })
 </script>
 
 <style lang="scss" scoped>
-.evil-person {
+.banker-person {
   display: flex;
   align-items: baseline;
   gap: .5rem;
@@ -39,6 +39,7 @@ defineProps({
 
   .bank {
     font-size: 1rem;
+    color: var(--text-muted);
   }
 
   .spacer {

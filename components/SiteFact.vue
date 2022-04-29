@@ -1,7 +1,7 @@
 <template>
   <article class="evil-datum">
     <h3 class="evil-datum-heading">
-      <slot name="number" />
+      <slot name="heading" />
       <div class="evil-datum-secondary" v-if="$slots.secondary">
         <slot name="secondary" />
       </div>

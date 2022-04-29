@@ -3,10 +3,10 @@
     <number
       animation-paused
       ref="animatedNumber"
-      :from="0"
+      :from="fromNumber"
       :to="toNumber"
       :format="numberFormat"
-      :duration="1.5"
+      :duration="1.25"
       easing="Power1.easeOut"/>
   </span>
 </template>
@@ -25,6 +25,10 @@ const props = defineProps({
     type: Number,
     required: true
   },
+  fromNumber: {
+    type: Number,
+    default: 0
+  },
   currency: {
     type: Boolean,
     default: false
@@ -34,8 +38,8 @@ const props = defineProps({
 const animatedNumber = ref(null)
 
 const numberFormat = (number) => {
-  const currency = props.currency ? { style: 'currency', currency: 'EUR', maximumSignificantDigits: 3 } : null
-  return new Intl.NumberFormat('es-ES', { ...currency }).format(number.toFixed(0))
+  const currency = props.currency ? { style: 'currency', currency: 'EUR' } : null
+  return new Intl.NumberFormat('es-ES', { maximumSignificantDigits: 3, ...currency }).format(parseInt(number))
 }
 
 onMounted(() => {

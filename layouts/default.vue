@@ -83,17 +83,15 @@ const route = useRoute()
 }
 
 :root {
-  --white: #fff;
   --blue: #00A7DD;
   --yellow: #f5c53e;
   --orange: #ff5924;
-  --black: #222;
   --font-bank: 'Gilroy', sans-serif;
   --font-compromis: 'Fixture', sans-serif;
 }
 
 .footer-wrapper {
   background: var(--orange);
-  color: white;
+  color: var(--white);
 }
 </style>

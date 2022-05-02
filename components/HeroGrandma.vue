@@ -3,7 +3,7 @@
     <div class="hero-grandma-text-first text-orange">
       <slot name="top" />
     </div>
-    <img src="../assets/images/granny.jpg" alt="">
+    <img :src="grannyImage" alt="">
     <div class="hero-grandma-text-second">
       <slot name="bottom" />
     </div>
@@ -14,6 +14,7 @@
 import { onMounted } from 'vue'
 import gsap from 'gsap' 
 import scrollTrigger from 'gsap/ScrollTrigger'
+import grannyImage from '../assets/images/granny.jpg'
 
 onMounted(() => {
   gsap.registerPlugin(scrollTrigger)

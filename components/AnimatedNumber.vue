@@ -1,13 +1,6 @@
 <template>
   <span class="animated-number me-1" :id="id">
-    <number
-      animation-paused
-      ref="animatedNumber"
-      :from="fromNumber"
-      :to="toNumber"
-      :format="numberFormat"
-      :duration="1.25"
-      easing="Power1.easeOut"/>
+    {{ toNumber }}
   </span>
 </template>
 
@@ -44,13 +37,17 @@ const numberFormat = (number) => {
 
 onMounted(() => {
   gsap.registerPlugin(scrollTrigger)
-  scrollTrigger.create({
-    trigger: `#${props.id}`,
-    start: 'top bottom',
-    onToggle () {
-      setTimeout(() => {
-        animatedNumber.value.play()
-      }, 250)
+  gsap.from(`#${props.id}`, {
+    textContent: props.fromNumber,
+    duration: 1.25,
+    snap: { textContent: 1 },
+    ease: 'Power1.easeIn',
+    scrollTrigger: {
+      trigger: `#${props.id}`,
+      start: 'top bottom'
+    },
+    onUpdate: function() {
+      this.targets()[0].innerHTML = numberFormat(Math.ceil(this.targets()[0].textContent))
     }
   })
 })

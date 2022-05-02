@@ -9,13 +9,7 @@
           {{ beforeBranches }}
         </span>
         <span v-else>
-          <number
-            ref="animatedNumber"
-            :from="beforeBranches"
-            :to="afterBranches"
-            :format="numberFormat"
-            :duration="1"
-            easing="Power1.easeOut"/>
+          <AnimatedNumber id="BBA" :from-number="beforeBranches" :to-number="afterBranches" />
         </span>
       </div>
     </div>

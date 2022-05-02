@@ -1,6 +1,6 @@
 <template>
   <svg version="1.1" x="0px" y="0px" viewBox="0 0 1400 933" preserveAspectRatio="xMidYMid slice" class="text">
-    <image style="overflow:visible;" width="1400" height="933" xlink:href="../assets/images/base.jpg"></image>
+    <image style="overflow:visible;" width="1400" height="933" :xlink:href="baseImage"></image>
     <g class="big-zero">
       <rect x="658.41" y="235.25" class="st0" width="360.21" height="408.01"/>
       <text transform="matrix(1 0 0 1 658.4061 559.3109)" class="st1 st2 st3 st4">{{ number }}</text>
@@ -9,7 +9,7 @@
         <text transform="matrix(0.9959 -0.0904 0.0904 0.9959 902.1575 558.1541)" class="st1 st2 st5 st6">%</text>
       </g>
     </g>
-    <image style="overflow:visible;" width="1400" height="933" xlink:href="../assets/images/transparent.png"></image>
+    <image style="overflow:visible;" width="1400" height="933" :xlink:href="transparentImage"></image>
     <g>
       <rect x="595.44" y="544.12" class="st7" :width="wider ? 460.33 : 418.33" height="215.78"/>
       <g>
@@ -41,6 +41,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import baseImage from '../assets/images/base.jpg'
+import transparentImage from '../assets/images/transparent.png'
 
 defineProps({
   interest: {

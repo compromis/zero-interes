@@ -78,5 +78,9 @@ defineProps({
   .section-grid {
     grid-template-columns: 1fr;
   }
+
+  .section-heading {
+    hyphens: none;
+  }
 }
 </style>

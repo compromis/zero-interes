@@ -14,7 +14,7 @@ import HeroGrandma from '@/components/HeroGrandma.vue'
     </HeroBailout>
     <SiteSection>
       <template #heading>
-        Saps tot el que guanyen els bancs i els seus directius?
+        Mentre ells s'omplin les butxaques...
       </template>
       <SiteFact>
         <template #heading>
@@ -46,7 +46,7 @@ import HeroGrandma from '@/components/HeroGrandma.vue'
     </SiteSection>
     <SiteSection>
       <template #heading>
-        I amb tot açò, què fan per tu?
+        ... a tu et donen l'esquena
       </template>
       <SiteFact>
         <template #heading>

@@ -32,7 +32,6 @@
         </Transition>
       </text>
     </g>
-    
     <a xlink:href="#bailout" class="button">
       <rect x="595.39" y="769.82" :width="wider ? 142.33 : 134.33" height="46.44" class="cta"></rect>
       <text transform="matrix(1 0 0 1 619.8328 798.5001)" class="cta-text">{{ cta }}</text>

@@ -37,11 +37,5 @@ export default defineNuxtConfig({
     ],
   },
 
-  css: ['@compromis/blobby/scss/blobby.scss'],
-
-  vue: {
-    compilerOptions: {
-      isCustomElement: tag => ['MarqueeText', 'number', 'marquee-text'].includes(tag)
-    }
-  }
+  css: ['@compromis/blobby/scss/blobby.scss']
 })

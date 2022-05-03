@@ -1,12 +1,21 @@
 <template>
   <section id="bailout" class="hero-bailout">
-    <ClientOnly>
-      <MarqueeText class="hero-bailout-marquee" :duration="40" :repeat="2" :paused="isPaused">
+    <div class="hero-bailout-number">
+      <div :class="['hero-bailout-marquee', !isPaused && 'active']">
         <div class="scroll">
           100.000.000.000€
         </div>
-      </MarqueeText>
-    </ClientOnly>
+        <div class="scroll">
+          100.000.000.000€
+        </div>
+        <div class="scroll">
+          100.000.000.000€
+        </div>
+        <div class="scroll">
+          100.000.000.000€
+        </div>
+      </div>
+    </div>
     <div class="hero-bailout-subtitle">
       <div class="container"><slot /></div>
     </div>
@@ -41,18 +50,46 @@ onMounted(() => {
   display: grid;
   grid-template-rows: 1fr auto;
   align-items: center;
+  --move-initial: 0;
+  --move-final: -100%;
 
   &-subtitle {
     font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 1.2;
     padding: 2rem 0;
   }
+
+  &-number {
+    overflow: hidden;
+  }
+
+  &-marquee {
+    animation: scroll 15s linear infinite;
+    animation-play-state: paused;
+    transform: translate3d(var(--move-initial), 0, 0);
+    display: flex;
+
+    .scroll {
+      font-size: clamp(20rem, 35vw, 40rem);
+      line-height: 1.2;
+      align-self: center;
+      transform: translateY(2vw);
+      margin-left: 20vw;
+    }
+
+    &.active {
+      animation-play-state: running;
+    }
+  }
 }
-.scroll {
-  font-size: clamp(20rem, 35vw, 40rem);
-  margin-left: 20vw;
-  line-height: 1.2;
-  align-self: center;
-  transform: translateY(2vw);
+
+@keyframes scroll {
+  0% {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(var(--move-final), 0, 0);
+  }
 }
 </style>

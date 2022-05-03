@@ -33,11 +33,11 @@ import HeroGrandma from '@/components/HeroGrandma.vue'
           Salaris directius
         </template>
         <ul class="list-reset mb-3">
-          <BankerPerson name="Ana Botín" bank="Santander" :salary="12290000" id="P1" />
-          <BankerPerson name="Josep Oliu" bank="Sabadell" :salary="9730000" id="P2" />
-          <BankerPerson name="Carlos Torrers Vila" bank="BBVA" :salary="7840000" id="P3" />
-          <BankerPerson name="Gonzalo Gortázar" bank="CaixaBank" :salary="3890000" id="P4" />
           <BankerPerson name="Mª Dolores Dancausa" bank="Bankinter" :salary="1410000" id="P5" />
+          <BankerPerson name="Gonzalo Gortázar" bank="CaixaBank" :salary="3890000" id="P4" />
+          <BankerPerson name="Carlos Torrers Vila" bank="BBVA" :salary="7840000" id="P3" />
+          <BankerPerson name="Josep Oliu" bank="Sabadell" :salary="9730000" id="P2" />
+          <BankerPerson name="Ana Botín" bank="Santander" :salary="12290000" id="P1" />
         </ul>
         <a href="https://cincodias.elpais.com/cincodias/2022/03/01/companias/1646158931_995561.html" target="_blank" rel="noopener noreferer">
           Tots els salaris
@@ -55,7 +55,7 @@ import HeroGrandma from '@/components/HeroGrandma.vue'
         <template #secondary>
           <span class="text-red"><AnimatedNumber id="AN31" :to-number="-57" />%</span>
         </template>
-        Oficines tancades de 5.015 que hi havia en 2008.
+        Oficines tancades de 5.104 que hi havia en 2008.
       </SiteFact>
       <SiteFact>
         <template #heading>
@@ -65,7 +65,7 @@ import HeroGrandma from '@/components/HeroGrandma.vue'
       </SiteFact>
       <SiteFact>
         <template #heading>
-          <AnimatedNumber id="AN4" :to-number="10000" />
+          <AnimatedNumber id="AN4" :to-number="100000" />
         </template>
         Empleats de banca acomiadats des de 2008
       </SiteFact>

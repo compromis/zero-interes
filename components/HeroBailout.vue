@@ -55,7 +55,7 @@ onMounted(() => {
 
   &-subtitle {
     font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1.2;
+    line-height: 1.1;
     padding: 2rem 0;
   }
 

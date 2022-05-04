@@ -1,9 +1,3 @@
-<script setup>
-import HeroInterest from '@/components/HeroInterest.vue'
-import HeroBailout from '@/components/HeroBailout.vue'
-import HeroGrandma from '@/components/HeroGrandma.vue'
-</script>
-
 <template>
   <main>
     <HeroInterest>

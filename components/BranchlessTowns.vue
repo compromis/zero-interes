@@ -4,7 +4,7 @@
       <span class="branchless-town-name">{{ name }}</span>
       <div class="branchless-town-bar">
         <span :class="['closed', { animated }]" :id="`PB${i}`" :style="{ '--width': percentage(closed, open), '--delay': `${i * 0.25}s` }">
-          <span class="d-block p-1"><AnimatedNumber :id="`CN${i}`" :to-number="closed" /></span>
+          <span class="d-block p-1"><AnimatedNumber :id="`CN${i}`" :from-number="open + closed" :to-number="closed" /></span>
         </span>
         <span class="open">
           <span class="d-block p-1">de {{ closed + open }}</span>
@@ -63,11 +63,12 @@ onMounted(() => {
   &-bar {
     display: flex;
     border: 1px solid var(--black);
+    position: relative;
 
     .closed {
       background: var(--black);
       color: var(--white);
-      width: 0;
+      width: 100%;
       overflow: hidden;
 
       &.animated {
@@ -77,14 +78,16 @@ onMounted(() => {
     }
 
     .open {
-      margin-left: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 }
 
 @keyframes fillBar {
   0% {
-    width: 0;
+    width: 100%;
   }
   100% {
     width: var(--width);

@@ -1,21 +1,21 @@
 <template>
-  <article class="evil-datum">
-    <h3 class="evil-datum-heading">
+  <article class="site-fact">
+    <h3 class="site-fact-heading">
       <slot name="heading" />
-      <div class="evil-datum-secondary" v-if="$slots.secondary">
+      <div class="site-fact-secondary" v-if="$slots.secondary">
         <slot name="secondary" />
       </div>
     </h3>
-    <div class="evil-datum-content">
+    <div class="site-fact-content">
       <slot />
     </div>
   </article>
 </template>
 
 <style lang="scss" scoped>
-.evil-datum {
+.site-fact {
   h3 {
-    font-size: 2rem;
+    font-size: calc(1.25rem + .6vw);
   }
 
   &-heading {
@@ -29,7 +29,7 @@
 
   &-content {
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: calc(1rem + .4vw);
     line-height: 1.1;
   }
 

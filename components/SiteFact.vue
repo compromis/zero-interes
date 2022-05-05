@@ -29,7 +29,7 @@
 
   &-content {
     font-weight: 400;
-    font-size: calc(1rem + .4vw);
+    font-size: calc(1rem + .2vw);
     line-height: 1.1;
   }
 

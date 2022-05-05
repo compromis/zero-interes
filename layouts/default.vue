@@ -40,7 +40,7 @@ const route = useRoute()
         url('../assets/fonts/Gilroy-BlackItalic.ttf') format('truetype');
     font-weight: 900;
     font-style: italic;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -50,7 +50,7 @@ const route = useRoute()
         url('../assets/fonts/Gilroy-ExtraBoldItalic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -60,7 +60,7 @@ const route = useRoute()
         url('../assets/fonts/Gilroy-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -70,7 +70,7 @@ const route = useRoute()
         url('../assets/fonts/Fixture-ExpandedBlack.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -79,7 +79,7 @@ const route = useRoute()
         url('../assets/fonts/Fixture-ExpandedRegular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 :root {

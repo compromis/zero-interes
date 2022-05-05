@@ -46,7 +46,7 @@ onMounted(() => {
   background: var(--blue);
   font-family: var(--font-bank);
   color: var(--white);
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: 1fr auto;
   align-items: center;
@@ -64,14 +64,15 @@ onMounted(() => {
   }
 
   &-marquee {
-    animation: scroll 15s linear infinite;
+    animation: scroll 175s linear infinite;
     animation-play-state: paused;
     transform: translate3d(var(--move-initial), 0, 0);
     display: flex;
+    width: fit-content;
 
     .scroll {
       font-size: clamp(20rem, 35vw, 40rem);
-      line-height: 1.2;
+      line-height: 1;
       align-self: center;
       transform: translateY(2vw);
       margin-left: 20vw;

@@ -85,7 +85,7 @@
       <template #heading>
         Pobles abandonats per la banca
       </template>
-      <BankBranches :before="['Oficines 2008', 5105]" :after="['Oficines 2019', 2940]" />
+      <BankBranches :before="['Oficines 2008', 5105]" :after="['Oficines 2019', 2164]" />
       <SiteFact>
         <template #heading>
           Pobles sense cap oficina
